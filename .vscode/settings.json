@@ -3,6 +3,7 @@
         "next",
         "nuxt",
         "angular",
-        "react-native"
+        "expo",
+        "doc"
     ]
 }
