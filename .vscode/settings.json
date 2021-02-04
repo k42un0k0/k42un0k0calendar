@@ -1,0 +1,8 @@
+{
+    "conventionalCommits.scopes": [
+        "next",
+        "nuxt",
+        "angular",
+        "react-native"
+    ]
+}
