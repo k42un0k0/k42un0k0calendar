@@ -1,6 +1,9 @@
 # K42un0k0Calendar
 
-このリポジトリはfirebase周りを触りたいがためのリポジトリです
+## やりたいこと
+
+- firebase 周り
+- webフロントエンドのフレームワーク全般
 
 ## .npmrc
 
