@@ -1,10 +1,6 @@
 # K42un0k0calendar
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
-
-## Generate Page Module
-
-Run `yarn g module customers --route customers --module app.module` to generate a page module. The module will be included in app-module automaticaly. So There is no more step to run server with a generated page.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
 
 ## Development server
 

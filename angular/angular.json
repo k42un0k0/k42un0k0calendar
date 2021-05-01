@@ -3,35 +3,32 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "k42un0k0calendar": {
+    "calendar": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
-      "root": "",
-      "sourceRoot": "src",
+      "root": "projects/calendar",
+      "sourceRoot": "projects/calendar/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/k42un0k0calendar",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "outputPath": "dist/calendar",
+            "index": "projects/calendar/src/index.html",
+            "main": "projects/calendar/src/main.ts",
+            "polyfills": "projects/calendar/src/polyfills.ts",
+            "tsConfig": "projects/calendar/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/calendar/src/favicon.ico",
+              "projects/calendar/src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "projects/calendar/src/styles.scss"
             ],
             "scripts": []
           },
@@ -39,8 +36,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "projects/calendar/src/environments/environment.ts",
+                  "with": "projects/calendar/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -53,13 +50,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -68,33 +65,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "k42un0k0calendar:build"
+            "browserTarget": "calendar:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "k42un0k0calendar:build:production"
+              "browserTarget": "calendar:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "k42un0k0calendar:build"
+            "browserTarget": "calendar:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "main": "projects/calendar/src/test.ts",
+            "polyfills": "projects/calendar/src/polyfills.ts",
+            "tsConfig": "projects/calendar/tsconfig.spec.json",
+            "karmaConfig": "projects/calendar/karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "projects/calendar/src/favicon.ico",
+              "projects/calendar/src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "projects/calendar/src/styles.scss"
             ],
             "scripts": []
           }
@@ -103,9 +100,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "projects/calendar/tsconfig.app.json",
+              "projects/calendar/tsconfig.spec.json",
+              "projects/calendar/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -115,17 +112,257 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "k42un0k0calendar:serve"
+            "protractorConfig": "projects/calendar/e2e/protractor.conf.js",
+            "devServerTarget": "calendar:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "k42un0k0calendar:serve:production"
+              "devServerTarget": "calendar:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "todo": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/todo",
+      "sourceRoot": "projects/todo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/todo",
+            "index": "projects/todo/src/index.html",
+            "main": "projects/todo/src/main.ts",
+            "polyfills": "projects/todo/src/polyfills.ts",
+            "tsConfig": "projects/todo/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/todo/src/favicon.ico",
+              "projects/todo/src/assets"
+            ],
+            "styles": [
+              "projects/todo/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/todo/src/environments/environment.ts",
+                  "with": "projects/todo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "todo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "todo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "todo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/todo/src/test.ts",
+            "polyfills": "projects/todo/src/polyfills.ts",
+            "tsConfig": "projects/todo/tsconfig.spec.json",
+            "karmaConfig": "projects/todo/karma.conf.js",
+            "assets": [
+              "projects/todo/src/favicon.ico",
+              "projects/todo/src/assets"
+            ],
+            "styles": [
+              "projects/todo/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/todo/tsconfig.app.json",
+              "projects/todo/tsconfig.spec.json",
+              "projects/todo/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/todo/e2e/protractor.conf.js",
+            "devServerTarget": "todo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "memo": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/memo",
+      "sourceRoot": "projects/memo/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/memo",
+            "index": "projects/memo/src/index.html",
+            "main": "projects/memo/src/main.ts",
+            "polyfills": "projects/memo/src/polyfills.ts",
+            "tsConfig": "projects/memo/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/memo/src/favicon.ico",
+              "projects/memo/src/assets"
+            ],
+            "styles": [
+              "projects/memo/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/memo/src/environments/environment.ts",
+                  "with": "projects/memo/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "memo:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "memo:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "memo:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/memo/src/test.ts",
+            "polyfills": "projects/memo/src/polyfills.ts",
+            "tsConfig": "projects/memo/tsconfig.spec.json",
+            "karmaConfig": "projects/memo/karma.conf.js",
+            "assets": [
+              "projects/memo/src/favicon.ico",
+              "projects/memo/src/assets"
+            ],
+            "styles": [
+              "projects/memo/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/memo/tsconfig.app.json",
+              "projects/memo/tsconfig.spec.json",
+              "projects/memo/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/memo/e2e/protractor.conf.js",
+            "devServerTarget": "memo:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "memo:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "k42un0k0calendar"
+  "defaultProject": "calendar"
 }
