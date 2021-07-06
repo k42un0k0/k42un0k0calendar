@@ -1,13 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { RecoilRoot } from 'recoil';
+import { db } from './lib/firebase';
 import Route from './screens';
-import firebase from "firebase/app"
-import {firebaseConfig} from "../firebase.config"
-import { useEffect } from 'react';
 
 export default function App() {
   useEffect(()=>{
-    firebase.initializeApp(firebaseConfig);
+    db.collection("users").add({
+      first: "Ada",
+      last: "Lovelace",
+      born: 1815
+  })
+  .then((docRef) => {
+      console.log("Document written with ID: ", docRef.id);
+  })
+  .catch((error) => {
+      console.error("Error adding document: ", error);
+  });
+  console.log(db.collection("users").get())
+  db.collection("users").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+        console.log(`${doc.id} => ${doc.data()}`);
+    });
+});
   },[])
   return (
     <RecoilRoot>
