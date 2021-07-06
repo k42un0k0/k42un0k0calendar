@@ -9,8 +9,12 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "@k42un0k0/puml-to-image": "0.1.0"
-  }
+    "@k42un0k0/puml-to-image": "0.1.2",
+    "lerna": "^4.0.0"
+  },
+  "private":true,
+  "workspaces": [
+    "packages/*"
+  ]
 }

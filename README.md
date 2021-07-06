@@ -3,7 +3,8 @@
 ## やりたいこと
 
 - firebase 周り
-- webフロントエンドのフレームワーク全般
+- web フロントエンドのフレームワーク全般
+- angular workspace
 
 ## .npmrc
 
