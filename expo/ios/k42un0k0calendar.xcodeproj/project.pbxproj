@@ -218,7 +218,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-k42un0k0calendar-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-k42un0k0k42un0k0calendarcheckManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -231,7 +231,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-k42un0k0calendar/Pods-k42un0k0calendar-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-k42un0k0calendar/Pods-k42un0k0k42un0k0calendarresources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
@@ -240,7 +240,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-k42un0k0calendar/Pods-k42un0k0calendar-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-k42un0k0calendar/Pods-k42un0k0k42un0k0calendarresources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {

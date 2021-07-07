@@ -1,7 +1,14 @@
 import Head from 'next/head'
+import { db } from '../lib/firebase'
 import styles from '../styles/Home.module.css'
+import React from 'react';
 
 export default function Home() {
+  db.collection("users").get().then((v)=>{
+    v.forEach((r)=>{
+     console.log(r.data())
+    })
+  })
   return (
     <div className={styles.container}>
       <Head>

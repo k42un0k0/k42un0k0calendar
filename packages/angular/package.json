@@ -1,5 +1,5 @@
 {
-  "name": "calendar-angular",
+  "name": "@k42un0k0calendar/angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
