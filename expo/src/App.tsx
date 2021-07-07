@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import { RecoilRoot } from 'recoil';
-import { db } from './lib/firebase';
+import firestore from '@react-native-firebase/firestore';
+
 import Route from './screens';
 
 export default function App() {
-  db.firestore.setLogLevel('debug')
-  db.firestore().collection("users").get().then((v)=>{
-    v.forEach((r)=>{
-     console.log(r.data())
+  const usersCollection = firestore().collection('users');
+  usersCollection.get().then((users)=>{
+    users.forEach((res)=>{
+      console.log(res)
     })
   })
   return (

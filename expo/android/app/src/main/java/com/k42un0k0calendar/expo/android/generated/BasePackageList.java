@@ -1,4 +1,4 @@
-package com.k42un0k0calendar.generated;
+package com.k42un0k0calendar.expo.android.generated;
 
 import java.util.Arrays;
 import java.util.List;
