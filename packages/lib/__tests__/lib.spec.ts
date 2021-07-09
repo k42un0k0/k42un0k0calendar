@@ -5,6 +5,6 @@ describe("lib", () => {
     it("print text", () => {
         global.console.log=jest.fn()
         lib()
-        expect(mocked(global.console.log).mock.calls).toBe([["i am number"]])
+        expect(mocked(global.console.log).mock.calls).toBe([["i am lib"]])
     })
 })
