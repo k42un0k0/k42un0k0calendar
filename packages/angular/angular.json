@@ -97,15 +97,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/calendar/tsconfig.app.json",
-              "projects/calendar/tsconfig.spec.json",
-              "projects/calendar/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/calendar/**/*.ts",
+              "projects/calendar/**/*.html"
             ]
           }
         },
@@ -217,15 +213,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/todo/tsconfig.app.json",
-              "projects/todo/tsconfig.spec.json",
-              "projects/todo/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/todo/**/*.ts",
+              "projects/todo/**/*.html"
             ]
           }
         },
@@ -337,15 +329,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/memo/tsconfig.app.json",
-              "projects/memo/tsconfig.spec.json",
-              "projects/memo/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/memo/**/*.ts",
+              "projects/memo/**/*.html"
             ]
           }
         },
@@ -364,5 +352,8 @@
       }
     }
   },
-  "defaultProject": "calendar"
+  "defaultProject": "calendar",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

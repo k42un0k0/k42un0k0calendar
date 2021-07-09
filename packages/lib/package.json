@@ -1,0 +1,33 @@
+{
+  "name": "@k42un0k0calendar/lib",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "かずのこ <k42un0k0.put1put1@gmail.com>",
+  "homepage": "https://github.com/k42un0k0/k42un0k0calendar#readme",
+  "license": "MIT",
+  "main": "lib/lib.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k42un0k0/k42un0k0calendar.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/k42un0k0/k42un0k0calendar/issues"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "typescript": "^4.3.5"
+  }
+}
