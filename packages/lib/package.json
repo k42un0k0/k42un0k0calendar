@@ -5,7 +5,7 @@
   "author": "かずのこ <k42un0k0.put1put1@gmail.com>",
   "homepage": "https://github.com/k42un0k0/k42un0k0calendar#readme",
   "license": "MIT",
-  "main": "lib/lib.js",
+  "main": "dist/lib.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -27,7 +27,9 @@
     "url": "https://github.com/k42un0k0/k42un0k0calendar/issues"
   },
   "devDependencies": {
-    "jest": "^27.0.6",
+    "@types/jest": "^26.0.24",
+    "jest": "^26.0.6",
+    "ts-jest": "^26.0.3",
     "typescript": "^4.3.5"
   }
 }

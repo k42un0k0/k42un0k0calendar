@@ -1,7 +1,10 @@
-'use strict';
+import { lib } from '../lib/lib';
+import { mocked } from "ts-jest/utils"
 
-import {lib} from '../lib/lib';
-
-describe('@k42un0k0calendar/lib', () => {
-    it('needs tests');
-});
+describe("lib", () => {
+    it("print text", () => {
+        global.console.log=jest.fn()
+        lib()
+        expect(mocked(global.console.log).mock.calls).toBe([["i am number"]])
+    })
+})
