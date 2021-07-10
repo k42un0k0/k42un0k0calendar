@@ -12,9 +12,14 @@
   </svg>
 </template>
 <script lang="ts">
-import Vue from 'vue'
+import { computed, defineComponent, useRoute } from '@nuxtjs/composition-api'
 
-export default Vue.extend({})
+export default defineComponent({
+  setup() {
+    const route = useRoute()
+    const id = computed(() => route.value.params.id)
+  },
+})
 </script>
 <style>
 .nuxt-logo {
