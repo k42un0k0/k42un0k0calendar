@@ -1,6 +1,8 @@
 {
 
   "npmClient": "yarn",
-  "useWorkspaces": true,
+  "projects": [
+    "packages/*"
+  ],
   "version": "independent"
 }
