@@ -30,6 +30,7 @@ export default {
     '@nuxtjs/stylelint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://composition-api.nuxtjs.org
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
