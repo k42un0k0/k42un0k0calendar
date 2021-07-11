@@ -1,9 +1,21 @@
 <template>
-  <Tutorial />
+  <div>
+    <Sample />
+    <input v-model="message" placeholder="edit me" />
+    <p>Message is: {{ message }}</p>
+  </div>
 </template>
 
-<script>
-import Vue from 'vue'
+<script lang="ts">
+import { defineComponent, reactive } from '@nuxtjs/composition-api'
+import Sample from '@/components/unko/Sample.vue'
 
-export default Vue.extend({})
+export default defineComponent({
+  components: { Sample },
+  setup() {
+    const { message } = reactive<{ message: string }>({ message: 'aaa' })
+
+    return { message }
+  },
+})
 </script>
