@@ -7,5 +7,5 @@
   - markdown入力ができる
   - 予定を入れることができる
   - googleカレンダーに連携できる
-
+- google calendarのUI再現
 - ある程度複雑なUI
