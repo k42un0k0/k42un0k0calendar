@@ -9,13 +9,17 @@
 <script lang="ts">
 import { defineComponent, reactive } from '@nuxtjs/composition-api'
 import Sample from '@/components/unko/Sample.vue'
+import { db } from '@/lib/firebase'
+import { getUsers, getData } from '@/lib/dao/todo'
+import { pipe } from 'fp-ts/function'
 
 export default defineComponent({
   components: { Sample },
   setup() {
     const { message } = reactive<{ message: string }>({ message: 'aaa' })
-
-    return { message }
+    ;(async function () {
+      const res = await pipe(db, getUsers(), getData('aaa'))
+    })()
   },
 })
 </script>
