@@ -13,6 +13,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    "vue/script-setup-uses-vars":0
+    "vue/script-setup-uses-vars":0,
+    "no-useless-constructor":0
   }
 }

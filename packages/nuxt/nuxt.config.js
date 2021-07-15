@@ -14,10 +14,19 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    "firebaseui/dist/firebaseui.css"
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    {
+      src: '@/plugins/firebase',
+      mode: 'client'
+    },
+    {
+      src:"@/plugins/repository"
+    }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -61,5 +70,8 @@ export default {
   generate: {
     // choose to suit your project
     interval: 2000,
+  },
+  router: {
+    middleware: ['auth']
   },
 }
